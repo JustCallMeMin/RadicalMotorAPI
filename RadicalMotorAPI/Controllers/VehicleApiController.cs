@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RadicalMotor.DTO;
 using RadicalMotor.Models;
 using RadicalMotor.Repositories;
+using RadicalMotorAPI.DTO;
 using System.Collections.Generic;
 
 namespace RadicalMotor.Controllers
@@ -39,7 +40,7 @@ namespace RadicalMotor.Controllers
 
         // POST: api/Vehicles
         [HttpPost]
-        public ActionResult<VehicleDTO> AddVehicle(VehicleDTO vehicleDto)
+        public ActionResult<VehicleDTO> AddVehicle(VehicleCreateDTO vehicleDto)
         {
             var vehicle = new Vehicle
             {
@@ -58,7 +59,7 @@ namespace RadicalMotor.Controllers
 
         // PUT: api/Vehicles/5
         [HttpPut("{chassisNumber}")]
-        public IActionResult UpdateVehicle(string chassisNumber, VehicleDTO vehicleDto)
+        public IActionResult UpdateVehicle(string chassisNumber, VehicleCreateDTO vehicleDto)
         {
             if (chassisNumber != vehicleDto.ChassisNumber)
             {

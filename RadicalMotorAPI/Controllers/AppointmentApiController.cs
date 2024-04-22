@@ -51,7 +51,7 @@ namespace RadicalMotorAPI.Controllers
 		}
 
 		[HttpPost("book")]
-		public async Task<IActionResult> BookService([FromBody] AppointmentDTO bookingDto)
+		public async Task<IActionResult> BookService([FromBody] AppointmentDTO appointmentDto)
 		{
 			var loggedInAccountId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 			if (string.IsNullOrEmpty(loggedInAccountId))
@@ -59,14 +59,18 @@ namespace RadicalMotorAPI.Controllers
 				return Unauthorized();
 			}
 
-			// Check if the customer exists or create a new one
-			var customer = await _customerRepository.GetOrCreateCustomerAsync(bookingDto.FullName, bookingDto.PhoneNumber);
+			var userEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-			// Check if the service exists
-			var service = await _serviceRepository.GetServiceByIdAsync(bookingDto.ServiceId);
-			if (service == null)
+			if (string.IsNullOrEmpty(userEmail))
 			{
-				return BadRequest("Invalid Service ID.");
+				return Unauthorized("User is not logged in.");
+			}
+
+			// Retrieve the account ID from the User claims or database
+			var account = await _accountRepository.GetByEmailAsync(userEmail);
+			if (account == null)
+			{
+				return Unauthorized("Account not found.");
 			}
 
 			// Create and save the appointment
@@ -77,16 +81,21 @@ namespace RadicalMotorAPI.Controllers
 			};
 			await _appointmentRepository.AddAppointmentAsync(appointment); // Ensure this method exists and is implemented correctly
 
+			if (!DateTime.TryParse(appointmentDto.ServiceDate, out var parsedServiceDate))
+			{
+				return BadRequest("Invalid date format");
+			}
+
 			var appointmentDetail = new AppointmentDetail
 			{
 				AppointmentId = appointment.AppointmentId,
-				ServiceId = bookingDto.ServiceId,
-				ServiceDate = bookingDto.ServiceDate,
-				Notes = bookingDto.Notes
+				ServiceId = appointmentDto.ServiceId,
+				ServiceDate = parsedServiceDate,
+				Notes = appointmentDto.Notes
 			};
 			await _appointmentRepository.AddAppointmentDetailAsync(appointmentDetail); // Ensure this method exists and is implemented correctly
 
-			return CreatedAtAction("GetAppointmentDetail", new { appointmentId = appointment.AppointmentId, serviceId = bookingDto.ServiceId }, appointmentDetail);
+			return CreatedAtAction("GetAppointmentDetail", new { appointmentId = appointment.AppointmentId, serviceId = appointmentDto.ServiceId }, appointmentDetail);
 		}
 
 

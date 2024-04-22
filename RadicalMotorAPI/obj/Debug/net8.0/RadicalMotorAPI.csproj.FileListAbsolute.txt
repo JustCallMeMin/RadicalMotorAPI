@@ -136,3 +136,4 @@ E:\development\web\RadicalMotorAPI\RadicalMotorAPI\obj\Debug\net8.0\RadicalMotor
 E:\development\web\RadicalMotorAPI\RadicalMotorAPI\obj\Debug\net8.0\RadicalMotorAPI.genruntimeconfig.cache
 E:\development\web\RadicalMotorAPI\RadicalMotorAPI\obj\Debug\net8.0\ref\RadicalMotorAPI.dll
 E:\development\web\RadicalMotorAPI\RadicalMotorAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\development\web\RadicalMotorAPI\RadicalMotorAPI\obj\Debug\net8.0\RadicalMotorAPI.sourcelink.json

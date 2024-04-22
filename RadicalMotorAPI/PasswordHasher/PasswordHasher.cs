@@ -8,9 +8,9 @@ namespace RadicalMotorAPI.PasswordHash
 			return BCrypt.Net.BCrypt.HashPassword(password);
 		}
 
-		public static bool VerifyPassword(string password, string hash)
+		public static bool VerifyPassword(string password, string hashedPassword)
 		{
-			return BCrypt.Net.BCrypt.Verify(password, hash);
+			return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
 		}
 	}
 }

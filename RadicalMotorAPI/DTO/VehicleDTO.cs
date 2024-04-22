@@ -6,5 +6,6 @@
     public string Price { get; set; }
     public string Version { get; set; }
     public string VehicleTypeId { get; set; }
-    public List<string> ImageUrls { get; set; }
+	public string VehicleType { get; set; }
+	public List<string> ImageUrls { get; set; }
 }

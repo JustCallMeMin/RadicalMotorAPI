@@ -12,8 +12,8 @@ using RadicalMotor.Models;
 namespace RadicalMotorAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240421094614_initials")]
-    partial class initials
+    [Migration("20240422040449_Initials")]
+    partial class Initials
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -89,6 +89,7 @@ namespace RadicalMotorAPI.Migrations
             modelBuilder.Entity("RadicalMotor.Models.Appointment", b =>
                 {
                     b.Property<string>("AppointmentId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AccountId")
@@ -116,9 +117,6 @@ namespace RadicalMotorAPI.Migrations
                     b.Property<string>("Notes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("ServiceAmount")
-                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<DateTime>("ServiceDate")
                         .HasColumnType("datetime2");

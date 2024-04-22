@@ -11,17 +11,30 @@ namespace RadicalMotor.Controllers
 	public class AccountsController : ControllerBase
 	{
 		private readonly IAccountRepository _accountRepository;
+		private readonly ICustomerRepository _customerRepository;
 
-		public AccountsController(IAccountRepository accountRepository)
+		public AccountsController(IAccountRepository accountRepository, ICustomerRepository customerRepository)
 		{
 			_accountRepository = accountRepository;
+			_customerRepository = customerRepository;
 		}
-		// GET: api/Accounts
-		[HttpGet]
+
+		//GET: api/Accounts
+	   [HttpGet]
 		public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
 		{
 			return Ok(await _accountRepository.GetAllAccountsAsync());
 		}
+
+		//[HttpGet("testPasswordVerification")]
+		//public ActionResult TestPasswordVerification()
+		//{
+		//	var hash = "$2a$11$F0mOrmyXjLhSSwmafLuKoer9pPpJH/LnKZdN7rCr/ofU8SlM7PJiK";
+		//	var password = "tnhminh33";
+		//	var isPasswordValid = PasswordHasher.VerifyPassword(password, hash);
+
+		//	return Ok($"Password verification result: {isPasswordValid}");
+		//}
 
 		// GET: api/Accounts/{id}
 		[HttpGet("{id}")]
@@ -37,7 +50,7 @@ namespace RadicalMotor.Controllers
 
 		// POST: api/Accounts
 		[HttpPost]
-		public async Task<ActionResult<Account>> PostAccount([FromBody] AccountDTO accountDto)
+		public async Task<ActionResult<Account>> PostAccount([FromBody] AccountCreateDTO accountDto)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -60,7 +73,7 @@ namespace RadicalMotor.Controllers
 			{
 				Username = accountDto.Username,
 				Email = accountDto.Email,
-				Password = PasswordHasher.HashPassword(accountDto.Password),
+				Password = accountDto.Password,
 				AccountTypeId = defaultAccountType.AccountTypeId,
 				AccountCreationDate = DateTime.UtcNow
 			};
@@ -76,15 +89,40 @@ namespace RadicalMotor.Controllers
 
 		// PUT: api/Accounts/{id}
 		[HttpPut("{id}")]
-		public async Task<IActionResult> PutAccount(string id, [FromBody] Account account)
+		public async Task<IActionResult> PutAccount(string id, [FromBody] AccountDTO accountDto)
 		{
-			if (id != account.AccountId)
+			if (!ModelState.IsValid)
 			{
-				return BadRequest();
+				return BadRequest(ModelState);
 			}
 
-			await _accountRepository.UpdateAsync(account);
+			var account = await _accountRepository.GetByIdAsync(id);
+			if (account == null)
+			{
+				return NotFound("Account not found.");
+			}
 
+			if (!string.IsNullOrEmpty(accountDto.PhoneNumber))
+			{
+				var customer = await _customerRepository.GetByPhoneNumberAsync(accountDto.PhoneNumber);
+				if (customer != null)
+				{
+					account.CustomerId = customer.CustomerId;
+				}
+				else
+				{
+					return BadRequest("No customer with the provided phone number exists.");
+				}
+			}
+
+			account.Username = accountDto.Username;
+			account.Email = accountDto.Email;
+			account.PhoneNumber = accountDto.PhoneNumber;
+			if (!string.IsNullOrEmpty(accountDto.Password))
+			{
+				account.Password = PasswordHasher.HashPassword(accountDto.Password);
+			}
+			await _accountRepository.UpdateAsync(account);
 			return NoContent();
 		}
 

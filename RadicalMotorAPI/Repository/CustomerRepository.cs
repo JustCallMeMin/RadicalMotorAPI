@@ -12,6 +12,10 @@ public class CustomerRepository : ICustomerRepository
 	{
 		_context = context;
 	}
+	public async Task<Customer> GetByPhoneNumberAsync(string phoneNumber)
+	{
+		return await _context.Customers.FirstOrDefaultAsync(c => c.PhoneNumber == phoneNumber);
+	}
 
 	public async Task<Customer> GetOrCreateCustomerAsync(string fullName, string phoneNumber)
 	{
