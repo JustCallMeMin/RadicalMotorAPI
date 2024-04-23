@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "E:\\development\\web\\RadicalMotorAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\controllers\\appointmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\controllers\\appointmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\repository\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\repository\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\repository\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\controllers\\vehicleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\controllers\\vehicleapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\controllers\\appointmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\controllers\\appointmentapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|e:\\development\\web\\radicalmotorapi\\radicalmotorapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1918016-845C-4EB2-87F3-69463BA2003B}|RadicalMotorAPI\\RadicalMotorAPI.csproj|solutionrelative:radicalmotorapi\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "RadicalMotorAPI\\Repository\\ServiceRepository.cs",
+              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\ServiceRepository.cs",
+              "RelativeToolTip": "RadicalMotorAPI\\Repository\\ServiceRepository.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:48:47.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AccountType.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Models\\AccountType.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Models\\AccountType.cs",
@@ -71,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Account.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Models\\Account.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Models\\Account.cs",
@@ -84,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Controllers\\AccountsController.cs",
@@ -97,20 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountRepository.cs",
-              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AccountRepository.cs",
-              "RelativeDocumentMoniker": "RadicalMotorAPI\\Repository\\AccountRepository.cs",
-              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AccountRepository.cs",
-              "RelativeToolTip": "RadicalMotorAPI\\Repository\\AccountRepository.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAIwGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T17:47:46.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "VehicleRepository.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\VehicleRepository.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Repository\\VehicleRepository.cs",
@@ -123,7 +123,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "AppointmentApiController.cs",
+              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
+              "RelativeDocumentMoniker": "RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
+              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\AppointmentApiController.cs*",
+              "RelativeToolTip": "RadicalMotorAPI\\Controllers\\AppointmentApiController.cs*",
+              "ViewState": "AQIAADkAAAAAAAAAAAAwwEoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T09:55:10.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
+              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
+              "RelativeToolTip": "RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T09:55:14.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "VehicleApiController.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\VehicleApiController.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Controllers\\VehicleApiController.cs",
@@ -135,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LoginApiController.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\LoginApiController.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Controllers\\LoginApiController.cs",
@@ -148,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Program.cs",
               "RelativeDocumentMoniker": "RadicalMotorAPI\\Program.cs",
@@ -158,30 +184,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-22T10:01:34.473Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppointmentRepository.cs",
-              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
-              "RelativeDocumentMoniker": "RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
-              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
-              "RelativeToolTip": "RadicalMotorAPI\\Repository\\AppointmentRepository.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T09:55:14.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AppointmentApiController.cs",
-              "DocumentMoniker": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
-              "RelativeDocumentMoniker": "RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
-              "ToolTip": "E:\\development\\web\\RadicalMotorAPI\\RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
-              "RelativeToolTip": "RadicalMotorAPI\\Controllers\\AppointmentApiController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAIAAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T09:55:10.035Z"
             }
           ]
         }

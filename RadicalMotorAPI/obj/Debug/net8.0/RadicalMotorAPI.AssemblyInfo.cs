@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RadicalMotorAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+037648b614ee742c46047e8af30f7040ae6d29a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea6b187b621af2bc374f65ab342bd6bc8775a024")]
 [assembly: System.Reflection.AssemblyProductAttribute("RadicalMotorAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RadicalMotorAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

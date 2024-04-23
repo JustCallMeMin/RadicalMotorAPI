@@ -53,28 +53,22 @@ namespace RadicalMotorAPI.Controllers
 		[HttpPost("book")]
 		public async Task<IActionResult> BookService([FromBody] AppointmentDTO appointmentDto)
 		{
-			var loggedInAccountId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+			var loggedInAccountId = Request.Cookies["accountId"];
 			if (string.IsNullOrEmpty(loggedInAccountId))
 			{
-				return Unauthorized();
+				return Unauthorized("Account not found");
 			}
 
-			var userEmail = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var isLoggedInCookie = Request.Cookies["isLoggedIn"];
 
-			if (string.IsNullOrEmpty(userEmail))
-			{
-				return Unauthorized("User is not logged in.");
-			}
+            // Check if the 'isLoggedIn' cookie is set to 'true'
+            if (isLoggedInCookie != "true")
+            {
+                return Unauthorized("User is not logged in.");
+            }
 
-			// Retrieve the account ID from the User claims or database
-			var account = await _accountRepository.GetByEmailAsync(userEmail);
-			if (account == null)
-			{
-				return Unauthorized("Account not found.");
-			}
-
-			// Create and save the appointment
-			var appointment = new Appointment
+            // Create and save the appointment
+            var appointment = new Appointment
 			{
 				AccountId = loggedInAccountId,
 				DateCreated = DateTime.UtcNow
@@ -96,17 +90,6 @@ namespace RadicalMotorAPI.Controllers
 			await _appointmentRepository.AddAppointmentDetailAsync(appointmentDetail); // Ensure this method exists and is implemented correctly
 
 			return CreatedAtAction("GetAppointmentDetail", new { appointmentId = appointment.AppointmentId, serviceId = appointmentDto.ServiceId }, appointmentDetail);
-		}
-
-
-
-		private AppointmentDetail TransformDTOToAppointmentDetail(AppointmentDTO dto)
-		{
-			return new AppointmentDetail
-			{
-				AppointmentId = "Derived from some logic",
-				ServiceId = dto.ServiceId,
-			};
 		}
 
 		[HttpPut("{appointmentId}/{serviceId}")]
