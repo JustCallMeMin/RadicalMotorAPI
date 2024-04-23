@@ -29,7 +29,7 @@ namespace RadicalMotorAPI.Repositories
 
 		public async Task<Account> GetByIdAsync(string id)
 		{
-			return await _context.Accounts.FindAsync(id);
+			return await _context.Accounts.Include(a => a.AccountType).SingleOrDefaultAsync(a => a.AccountId == id);
 		}
 
 		public async Task<Account> AddAsync(Account account)

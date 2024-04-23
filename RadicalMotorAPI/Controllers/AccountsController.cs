@@ -141,6 +141,30 @@ namespace RadicalMotor.Controllers
 			return NoContent();
 		}
 
+		[HttpGet("{accountId}/type")]
+		public async Task<IActionResult> GetAccountType(string accountId)
+		{
+			if (string.IsNullOrEmpty(accountId))
+			{
+				return BadRequest("accountId is required.");
+			}
+
+			var account = await _accountRepository.GetByIdAsync(accountId);
+			if (account == null)
+			{
+				return NotFound("Account not found.");
+			}
+
+			// Make sure you have the AccountType included with the Account
+			var accountTypeName = account.AccountType?.TypeName;
+			if (accountTypeName == null)
+			{
+				return NotFound("Account type not found.");
+			}
+
+			return Ok(new { TypeName = accountTypeName });
+		}
+
 		// This utility method should also use the repository
 		private async Task<bool> AccountExists(string id) =>
 			await _accountRepository.GetByIdAsync(id) != null;

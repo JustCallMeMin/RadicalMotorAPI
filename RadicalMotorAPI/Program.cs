@@ -10,6 +10,7 @@ using RadicalMotor.Models;
 using RadicalMotor.Repositories;
 using RadicalMotorAPI.Repositories;
 using System;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,10 +54,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 	{
 		options.Cookie.HttpOnly = true;
 		options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-		options.Cookie.SameSite = SameSiteMode.Strict;
-		options.LoginPath = "/Home/Index";
-		options.LogoutPath = "/Home/Index";
-		options.AccessDeniedPath = "/Home/Index";
+		options.Cookie.SameSite = SameSiteMode.None;
+		options.Cookie.Path = "/";
+		options.ExpireTimeSpan = TimeSpan.FromDays(30);
+		options.SlidingExpiration = true;
 	});
 var app = builder.Build();
 
@@ -78,10 +79,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseCors("AllowSpecificOrigin");
+
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseCors("AllowSpecificOrigin");
 
 app.MapRazorPages();
 app.MapControllers();
